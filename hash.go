@@ -7,9 +7,9 @@ package main
 
 import (
 	"bytes"
-	"code.google.com/p/go.crypto/md4"
-	"code.google.com/p/go.crypto/ripemd160"
-	"code.google.com/p/go.crypto/sha3"
+	"golang.org/x/crypto/md4"
+	"golang.org/x/crypto/ripemd160"
+	"golang.org/x/crypto/sha3"
 	"crypto/md5"
 	"crypto/sha1"
 	"crypto/sha256"
@@ -32,8 +32,8 @@ var algorithms = []struct {
 	{"adler32", adler32.New()},
 	{"crc32", crc32.NewIEEE()},
 	{"crc64", crc64.New(crc64.MakeTable(crc64.ISO))},
-	{"keccak224", sha3.NewKeccak224()},
-	{"keccak256", sha3.NewKeccak256()},
+	{"keccak224", sha3.New224()},
+	{"keccak256", sha3.New256()},
 	{"md4", md4.New()},
 	{"md5", md5.New()},
 	{"ripemd160", ripemd160.New()},
